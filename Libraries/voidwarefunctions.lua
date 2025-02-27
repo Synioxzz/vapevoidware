@@ -231,7 +231,7 @@ end
 local cachedjson
 function RenderFunctions:UpdateWhitelist()
     local success, whitelistTable = pcall(function() 
-        return cachedjson or httpService:JSONDecode(game.HttpGetAsync(game, 'https://raw.githubusercontent.com/Erchobg/whitelist/main/whitelist.json'))
+        return cachedjson or httpService:JSONDecode(game.HttpGetAsync(game, 'https://raw.githubusercontent.com/Synioxzz/whitelist/main/whitelist.json'))
     end)
     if success and type(whitelistTable) == 'table' then 
         cachedjson = whitelistTable
